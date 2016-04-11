@@ -17,16 +17,17 @@
 
     <!-- 增加视频播放功能 使用 VideoView -->
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/framelayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
         >
 
         <com.example.annuoaichengzhang.videodemo.FullscreenVideoView
             android:id="@+id/videoView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="400dp"
             android:layout_gravity="center"
             />
 
@@ -68,13 +69,12 @@
 
         </LinearLayout>
 
-    </FrameLayout>
+    </LinearLayout>
 
     <SeekBar
         android:id="@+id/media_progress_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_below="@id/framelayout"
         />

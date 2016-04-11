@@ -112,15 +112,15 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         // 加载应用程序 res/raw 目录的视频
 //        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_test);
 
-//        // 加载服务器的视频
-//        Uri uri = Uri.parse("http://10.0.155.203:8080/video_test.3gp");
-//
-//        videoView.setVideoURI(uri);
+        // 加载服务器的视频
+        Uri uri = Uri.parse("http://down.fodizi.com/haitaofs/twd3117-1.flv");
 
-        File file = new File("/mnt/sdcard/videoviewdemo.mp4");
-        if (file.exists()) {
-            videoView.setVideoPath(file.getAbsolutePath());
-        }
+        videoView.setVideoURI(uri);
+
+//        File file = new File("/mnt/sdcard/videoviewdemo.mp4");
+//        if (file.exists()) {
+//            videoView.setVideoPath(file.getAbsolutePath());
+//        }
 
         videoView.start();
 
