@@ -112,21 +112,6 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         // 加载应用程序 res/raw 目录的视频
 //        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_test);
 
-        // 加载服务器的视频
-        Uri uri = Uri.parse("http://down.fodizi.com/haitaofs/twd3117-1.flv");
-
-        videoView.setVideoURI(uri);
-
-//        File file = new File("/mnt/sdcard/videoviewdemo.mp4");
-//        if (file.exists()) {
-//            videoView.setVideoPath(file.getAbsolutePath());
-//        }
-
-        videoView.start();
-
-        Thread thread = new Thread(this);
-
-        thread.start();
 
         // 加载存储卡中的文件，形成 Uri
 //        String state = Environment.getExternalStorageState();
@@ -144,6 +129,28 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
 //            // 3. 播放视频
 //            videoView.start();
 //        }
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 加载服务器的视频
+        Uri uri = Uri.parse("http://10.1.13.25/videoviewdemo.mp4");
+
+        videoView.setVideoURI(uri);
+
+//        File file = new File("/mnt/sdcard/videoviewdemo.mp4");
+//        if (file.exists()) {
+//            videoView.setVideoPath(file.getAbsolutePath());
+//        }
+
+        videoView.start();
+
+        Thread thread = new Thread(this);
+
+        thread.start();
+
     }
 
     @Override
